@@ -41,7 +41,7 @@ CREATE TABLE BEST_PLAYER(
     );
  
 ALTER TABLE TEAM ADD (
-    foreign key (BestPlayerLName, BestPlayerFName, DOB) references BEST_PLAYER(LName, FName)
+    foreign key (BestPlayerLName, BestPlayerFName) references BEST_PLAYER(LName, FName)
 );
 
 ALTER TABLE MATCHUP ADD(
