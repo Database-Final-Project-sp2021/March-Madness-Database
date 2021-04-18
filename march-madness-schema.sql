@@ -35,7 +35,7 @@ CREATE TABLE REGION(
 CREATE TABLE BEST_PLAYER(
     FName               VarChar(20)     NOT NULL,
     LName               VarChar(20)     NOT NULL,
-    DOB                 date            NOT NULL,
+    Year                VarChar(20)     NOT NULL,
     PPG                 Int             NULL,
     primary key (LName,FName)
     );
