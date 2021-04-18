@@ -21,7 +21,7 @@ CREATE TABLE MATCHUP(
     CollegeLowSeed      VarChar(50)     NOT NULL,
     CollegeHighSeed     VarChar(50)     NOT NULL,
     RegionName          VarChar(50)     NULL,
-    Spread              Int             NOT NULL,
+    Spread              Float             NOT NULL,
     DatePlayed          Date            NOT NULL, 
     CONSTRAINT          MATCHUP_PK      PRIMARY KEY(CollegeLowSeed, CollegeHighSeed)
     );
