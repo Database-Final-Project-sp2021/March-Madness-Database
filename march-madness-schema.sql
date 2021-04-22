@@ -29,7 +29,7 @@ CREATE TABLE MATCHUP(
 CREATE TABLE REGION(
     College             VarChar(50)     NOT NULL,
     RegionName          VarChar(50)     NOT NULL,
-    CONSTRAINT          REGION_PK       PRIMARY KEY(RegionName)
+    CONSTRAINT          REGION_PK       PRIMARY KEY(College)
     );
     
 CREATE TABLE BEST_PLAYER(
