@@ -46,8 +46,7 @@ ALTER TABLE TEAM ADD (
 
 ALTER TABLE MATCHUP ADD(
     foreign key (CollegeLowSeed) references TEAM(College),
-    foreign key (CollegeHighSeed) references TEAM(College),
-    foreign key (RegionName) references REGION(RegionName)
+    foreign key (CollegeHighSeed) references TEAM(College)
 );
 
 ALTER TABLE REGION ADD(
