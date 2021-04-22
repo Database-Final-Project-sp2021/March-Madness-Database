@@ -13,7 +13,7 @@ CREATE TABLE TEAM(
     BestPlayerLName     VarChar(20)     NOT NULL,
     SeedNum             Int             NOT NULL,
     Wins                Int             NOT NULL,
-    Loses               Int             NOT NULL,
+    Losses               Int             NOT NULL,
 	CONSTRAINT			TEAM_PK		    PRIMARY KEY(College)
 	);
     
