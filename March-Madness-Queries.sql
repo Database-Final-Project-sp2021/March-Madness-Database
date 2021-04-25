@@ -1,6 +1,5 @@
 /*Queries to demonstrate how the March Madness database works*/
 
-
 /*Get the top 10 scorers in college basketball*/
 select * from best_player order by ppg desc fetch first 10 rows only;
 
@@ -23,3 +22,26 @@ order by b.ppg desc;
 select t.mascot, t.college
 from team t
 where t.mascot = 'Wildcats';
+
+-- Get the Names of the players and their Colleges that played on 19th March, 2021 and in the south region
+SELECT BestPlayerLName,BestPlayerFName, College
+FROM TEAM
+WHERE College IN
+      (SELECT College
+       FROM REGION
+       WHERE RegionName IN
+            (SELECT RegionName
+             FROM MATCHUP
+             WHERE DatePlayed = '19-MAR-21' AND RegionName='South'))
+ORDER BY BestPlayerLName;
+
+
+-- Get the name of the players and their colleges that have more than 20 points
+SELECT BestPlayerLName,BestPlayerFName, College
+FROM TEAM
+WHERE BestPlayerLName IN
+      (SELECT Lname
+       FROM BEST_PLAYER
+       WHERE PPG > 20)
+ORDER BY BestPlayerLName;
+
